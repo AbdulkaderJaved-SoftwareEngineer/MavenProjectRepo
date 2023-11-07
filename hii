@@ -1,0 +1,78 @@
+	Chrome Driver 
+
+	Plugins 
+	Selenium plugin 
+	Selenium builder plugin
+	TestNG Results Plugin
+
+STEP 1:
+	Download Chrome Driver (link provided)
+	Extract it
+
+STEP 2:
+	Go to your Local Drive Folder
+	Create folder ‘Selinium’
+	Open cmd here
+	Paste the mvn cmd
+	A folder ‘JavProject’ will be created
+STEP 3:
+	Open it in VS Code
+	Go to the pom.xml file
+	Paste the dependency code in the dependencies tag after the prsent dependency tag.
+	Go to src/main/java/com/Example
+	Create a Java file
+	Name it SeleniumExample.java
+	Paste the code provided
+	Also go to the chrome driver extracted
+	Open it 
+	Copy the path 
+	Paste the path one the line 8 (tentative) after value
+	Open new terminal (top)
+	Type cmd ‘mvn install’ 
+	If it doen not work
+	Type cmd cd JavProject
+
+STEP 4:
+	Login to your git account
+	Go to repositories
+	Create new
+	Give it a name
+	Create it
+	Copy the link of the repository
+
+STEP 5:
+	Open JavProject with git bash 
+	Right click on folder
+	Show more options
+	Open with git bash here
+	Type the following git commands to push folder to repository:
+	git init
+	git add .
+	git commit -m “SOME MESSAGE”
+	git remote add origin paste the repository link copied
+	git push -u origin main/master (based on your PC)
+
+STEP 6:
+	Go to Jenkins
+	Go to jenkins.war
+	Go to cmd 
+	Type ‘java -jar jenkins.war --httpPort=9191’
+	Open a new tab and type the URL ‘localhost:9191’
+	Enter username and password (or whatever you entered)
+	Username: admin
+	Password: Abc@123
+	Install the mentioned plugins in pre-requisites.
+
+STEP 7:
+	Create new item
+	Give any name 
+	Select maven project
+	give any description (opitional)
+	Check the ‘GitHub Project’
+	Paste the repository link copied
+	Under build, under goals and options, type test
+	Apply and then save
+	Build it 
+	Click on the build (eg. #2)
+	Go to console output
+	Scroll, if SUCCESS then project done
